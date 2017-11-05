@@ -1,0 +1,12 @@
+{
+  "name": "omon2017",
+  "homepage": "",
+  "authors": [
+    "Jerome Toole"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "*"
+  }
+}
