@@ -14,8 +14,7 @@
       "main": true
     },
     "vendor.js": {
-      "bower": ["dragscroll"],
-      "bower": ["scrollTo"]
+      "bower": ["dragscroll", "scrollTo"]
     },
     "jquery.js": {
       "bower": ["jquery"]

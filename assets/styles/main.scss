@@ -59,6 +59,35 @@ div.page {
   height: 5000px;
   width: 5000px;
   // background-image: radial-gradient(circle closest-side, white 45%,black 100%);
+  section {
+    position: absolute;
+  }
+  section.splash {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+    .like {
+      transition: all .1s ease;
+      &:hover {
+        text-decoration: underline;
+      }
+      &.active {
+        color: rgb(88, 144, 255);
+      }
+    }
+  }
+  section.coffee {
+    text-align: center;
+    img {
+      width: 14em;
+      height: auto;
+    }
+  }
 }
 
 .dragscroll {
@@ -78,16 +107,6 @@ div.page {
 }
 
 
-div.splash {
-  position: absolute;
-  top: 50%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
-  transform: translateY(-50%);
-
-}
 
 h1 {
   margin: {
@@ -108,7 +127,7 @@ div.left {
   bottom: 1.5em;
   left: 1.5em;
   span.centerViewport {
-    opacity: .8;
+    opacity: .2;
     cursor: pointer;
     &:hover {
       opacity: 1;
