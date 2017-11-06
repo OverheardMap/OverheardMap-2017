@@ -29,6 +29,7 @@ body {
   font-size: 90%;
   line-height: 1.2;
   background-color: $color-alpha;
+  letter-spacing: 0.02em;
 
 
   @media (min-width: $mq-sm) {
@@ -54,10 +55,18 @@ body {
   }
 }
 
+p {
+  margin-top: 0;
+}
+
+ul,ol {
+  margin: 0;
+}
+
 div.page {
   position: relative;
-  height: 5000px;
-  width: 5000px;
+  height: 3000px;
+  width: 3000px;
   // background-image: radial-gradient(circle closest-side, white 45%,black 100%);
   section {
     position: absolute;
@@ -66,7 +75,6 @@ div.page {
     position: absolute;
     top: 50%;
     left: 0;
-    letter-spacing: 0.02em;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
@@ -83,11 +91,39 @@ div.page {
   }
   section.coffee {
     text-align: center;
+    top: 53%;
+    right: 36%;
     img {
-      width: 14em;
+      width: 10em;
       height: auto;
     }
   }
+  section.empathy {
+    left: 30%;
+    top: 25%;
+    width: 40em;
+    img {
+      width: 100%;
+    }
+  }
+  section.lifestyle-attributes {
+    left: 20%;
+    bottom: 37%;
+    width: 32em;
+  }
+}
+
+.paper {
+  background: white;
+  padding: 2em;
+  border-radius: 5px;
+  border: solid 1px rgba(0,0,0,.07);
+  box-shadow: 0px 0px 46px 0px rgba(0,0,0,.2);
+}
+
+.hover {
+  border-radius: 5px;
+  box-shadow: 0px 0px 46px 0px rgba(0,0,0,.2)
 }
 
 .dragscroll {
