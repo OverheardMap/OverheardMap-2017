@@ -23,17 +23,13 @@ $font: Helvetica, Arial, sans-serif;
 }
 
 body {
-  position: relative;
-
-  height: 100vh;
-  width: 100%;
   margin: 0;
-
   font-family: $font;
   font-weight: 700;
   font-size: 90%;
   line-height: 1.2;
   background-color: $color-alpha;
+
 
   @media (min-width: $mq-sm) {
     font-size: 103%;
@@ -58,6 +54,29 @@ body {
   }
 }
 
+div.page {
+  position: relative;
+  height: 5000px;
+  width: 5000px;
+  // background-image: radial-gradient(circle closest-side, white 45%,black 100%);
+}
+
+.dragscroll {
+  overflow: scroll;
+  cursor: move;
+  cursor : -moz-grab;
+  cursor : -o-grab;
+  cursor : grab;
+  cursor : -webkit-grab;
+  &:active {
+    cursor: move;
+    cursor : -moz-grabbing;
+    cursor : -o-grabbing;
+    cursor : grabbing;
+    cursor : -webkit-grabbing;
+  }
+}
+
 
 div.splash {
   position: absolute;
@@ -79,8 +98,26 @@ h1 {
   font-size: 2.75em;
 }
 
-div.notes {
-  position: absolute;
+div.viewport {
+  z-index: 1;
+  position: relative;
+}
+
+div.left {
+  position: fixed;
+  bottom: 1.5em;
+  left: 1.5em;
+  span.centerViewport {
+    opacity: .8;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+div.right {
+  position: fixed;
   bottom: 1.5em;
   right: 1.5em;
   span,a {

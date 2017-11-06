@@ -1,3 +1,4 @@
+
 {
   "dependencies": {
     "main.js": {
@@ -13,14 +14,14 @@
       "main": true
     },
     "vendor.js": {
-      "vendor": [
-      ]
+      "bower": ["dragscroll"],
+      "bower": ["scrollTo"]
     },
     "jquery.js": {
       "bower": ["jquery"]
     }
   },
   "config": {
-    "devUrl": "localhost:2500"
+    "devUrl": "omon.dev:8888"
   }
 }
