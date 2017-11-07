@@ -9,5 +9,10 @@ $(document).ready(function() {
   $('span.like').click(function(event) {
     $(this).toggleClass('active');
   });
+
+  $('.friendly').click(function(event) {
+    console.log('this');
+    $('.friendly .card').toggleClass('flip');
+  });
 });
 
