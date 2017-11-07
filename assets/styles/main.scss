@@ -22,6 +22,15 @@ $font: Helvetica, Arial, sans-serif;
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
 body {
   margin: 0;
   font-family: $font;
@@ -68,8 +77,8 @@ ul,ol {
 
 div.page {
   position: relative;
-  height: 3000px;
-  width: 3000px;
+  height: 2500px;
+  width: 2500px;
   // background-image: radial-gradient(circle closest-side, white 45%,black 100%);
   section {
     position: absolute;
@@ -82,8 +91,15 @@ div.page {
     text-align: center;
     width: 100%;
     transform: translateY(-50%);
+    img {
+      margin-top: .2em;
+      width: 4em;
+      height: auto;
+      pointer-events: none;
+    }
     .like {
       transition: all .1s ease;
+      cursor: pointer;
       &:hover {
         text-decoration: underline;
       }
@@ -102,7 +118,7 @@ div.page {
     }
   }
   section.empathy {
-    left: 30%;
+    left: 20%;
     top: 25%;
     width: 40em;
     img {
@@ -110,9 +126,32 @@ div.page {
     }
   }
   section.lifestyle-attributes {
-    left: 20%;
-    bottom: 37%;
+    left: 4%;
+    top: 7%;
     width: 32em;
+  }
+  section.profiles {
+    right: 15%;
+    top: 50%;
+    text-transform: uppercase;
+    .words {
+      height: 4em;
+      width: 22em;
+      padding: 0 1em;
+      display: flex;
+      align-items: center;
+      background: black;
+      color: white;
+    }
+    .profiles__word {
+      width: 50%;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .adj {
+      margin-right: 1em;
+    }
   }
   section.friendly {
     right: 32%;
@@ -122,6 +161,7 @@ div.page {
     background: none;
     width: 12em;
     height: 4.5em;
+    cursor: pointer;
     .card {
       transform-style: preserve-3d;
       transition: 0.5s;
@@ -153,8 +193,8 @@ div.page {
     }
   }
   section.running {
-    left: 7%;
-    top: 36%;
+    left: 20%;
+    bottom: 37%;
   }
   section.pokemon {
     right: 5%;
