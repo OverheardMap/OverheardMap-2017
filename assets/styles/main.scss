@@ -108,6 +108,12 @@ div.page {
       }
     }
   }
+  section.chat {
+    top: 53%;
+    right: 33%;
+    background:white;
+    @extend .hover;
+  }
   section.coffee {
     text-align: center;
     top: 53%;
