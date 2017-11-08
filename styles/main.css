@@ -69,153 +69,194 @@ ul, ol {
 
 div.page {
   position: relative;
-  height: 2500px;
-  width: 2500px;
+  height: 100%;
+  width: 100%;
+  padding: 1.5em 2%;
+  background: #e9ebee;
 }
-section.chat {
+
+@media screen and (min-width: 480px) {
+    div.page {
+        width: 70%;
+    }
+}
+
+div.viewport-right {
+  z-index: 1;
+  position: relative;
   background: white;
   position: fixed;
-  right: 0;
   top: 0;
   bottom: 0;
+  right: 0;
   height: 100%;
   width: 30%;
-  max-width: 30em;
-  background: white;
-  z-index: 10;
-  box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   border-left: solid 1px rgba(0, 0, 0, .2);
 }
-div.page section {
-  position: absolute;
+
+div.notes {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1em;
 }
-div.page section.splash {
+div.notes .wrap {
+  text-align: right;
+}
+div.notes span, div.notes a {
+  display: block;
+  font-size: 0.9em;
+}
+
+section.chat {
+  width: 100%;
+  height: 90%;
+}
+
+.jewelCount {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: -14px;
+  right: -5px;
+}
+
+.jewelCount .number {
+  background-color: #fa3e3e;
+  border-radius: 2px;
+  color: #fff;
+  padding: 1px 3px;
+  background-clip: padding-box;
+  display: inline-block;
+  font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  line-height: 1.3;
+  min-height: 13px;
+  letter-spacing: -0.01em;
+}
+
+div.page .feed section {
+  margin-bottom: .8rem;
+  position: relative;
+  background: white;
+  padding: 2rem;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.07);
+  z-index: 10;
+  cursor: pointer;
+}
+
+div.page section.splash {
   text-transform: uppercase;
   text-align: center;
-  width: 100%;
-  transform: translateY(-50%);
+  margin-bottom: 1.5em;
 }
-div.page section.splash img {
-  margin-top: .2em;
-  width: 4em;
-  height: auto;
-  pointer-events: none;
-}
+
 div.page section.splash .like {
   transition: all .1s ease;
   cursor: pointer;
 }
+
 div.page section.splash .like:hover {
   text-decoration: underline;
 }
+
 div.page section.splash .like.active {
   color: #5890ff;
 }
+
 div.page section.coffee {
   text-align: center;
-  top: 53%;
-  right: 36%;
 }
+
 div.page section.coffee img {
   width: 10em;
   height: auto;
 }
-div.page section.empathy {
-  left: 20%;
-  top: 25%;
-  width: 40em;
-}
+
 div.page section.empathy img {
   width: 100%;
 }
-div.page section.lifestyle-attributes {
-  left: 4%;
-  top: 7%;
-  width: 32em;
-}
+
 div.page section.profiles {
-  right: 15%;
-  top: 50%;
   text-transform: uppercase;
 }
+
 div.page section.profiles .words {
   height: 4em;
   width: 22em;
+  margin: auto;
   padding: 0 1em;
   display: flex;
   align-items: center;
   background: black;
   color: white;
 }
+
 div.page section.profiles .profiles__word {
   width: 50%;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
 }
+
 div.page section.profiles .adj {
   margin-right: 1em;
 }
+
 div.page section.friendly {
-  right: 32%;
-  top: 38%;
   -webkit-perspective: 800px;
   padding: 0;
   background: none;
-  width: 12em;
+  width: 100%;
   height: 4.5em;
   cursor: pointer;
 }
+
 div.page section.friendly .card {
   transform-style: preserve-3d;
   transition: 0.5s;
   backface-visibility: hidden;
 }
+
 div.page section.friendly .card.flip {
   transform: rotatex(-180deg);
 }
+
 div.page section.friendly > div {
-  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 2;
   text-align: center;
 }
+
 div.page section.friendly .face {
-  width: 12em;
   height: 4.5em;
-  position: absolute;
   padding: 0 1em;
+  width: 100%;
   background: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: absolute;
 }
+
 div.page section.friendly .back {
   transform: rotatex(-180deg);
   backface-visibility: hidden;
 }
-div.page section.running {
-  left: 20%;
-  bottom: 37%;
-}
+
 div.page section.pokemon {
-  right: 12%;
-  top: 20%;
   font-size: .8em;
   display: flex;
   align-items: center;
 }
+
 div.page section.pokemon img {
   width: 16em;
   height: auto;
   margin-right: 1em;
-}
-div.page section.pokemon .paper {
-  max-width: 50em;
 }
 
 .point {
@@ -225,63 +266,20 @@ div.page section.pokemon .paper {
 
 .paper {
   background: white;
-  padding: 2em;
+  padding: 2rem;
   border-radius: 5px;
   border: solid 1px rgba(0, 0, 0, 0.07);
-  box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .hover, div.page section.chat {
   border-radius: 5px;
-  box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.2);
-}
-
-.dragscroll {
-  overflow: scroll;
-  cursor: move;
-  cursor: -moz-grab;
-  cursor: -o-grab;
-  cursor: grab;
-  cursor: -webkit-grab;
-}
-.dragscroll:active {
-  cursor: move;
-  cursor: -moz-grabbing;
-  cursor: -o-grabbing;
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2.75em;
-}
-
-div.viewport {
-  z-index: 1;
-  position: relative;
-}
-
-div.left {
-  position: fixed;
-  bottom: 1.5em;
-  left: 1.5em;
-}
-div.left span.centerViewport {
-  opacity: .2;
-  cursor: pointer;
-}
-div.left span.centerViewport:hover {
-  opacity: 1;
-}
-
-div.right {
-  position: fixed;
-  bottom: 1.5em;
-  right: 1.5em;
-}
-div.right span, div.right a {
-  display: block;
-  font-size: 0.9em;
+  text-align: left;
 }
