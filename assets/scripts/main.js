@@ -9,13 +9,44 @@ $(document).ready(function() {
   });
 
   $('div.page .feed section').click(function(event) {
-    var el = $(this).find('.jewelCount .number');
+    var el = $('.jewelCount .number');
     var number = +(el.text());
     number++;
-    console.log(number);
     $(el).text(number);
   });
 
+  $('.jewelCount').click(function(event) {
+    var el = $('.jewelCount .number');
+    var number = +(el.text());
+    reduceToZero(closing);
+  });
+
+  function closing() {
+    setTimeout(bluescreen, 5);
+    setTimeout(fadetoblack, 4000);
+  }
+
+  function bluescreen() {
+    $('.overlay').show();
+  }
+
+  function fadetoblack() {
+    $('.overlay').addClass('blackout');
+  }
+
+  function reduceToZero(callback) {
+    var reducenumber = setInterval(function() {
+      var el = $('.jewelCount .number');
+      var value = +(el.text());
+      if (value > 0) {
+        value--;
+        $(el).text(value);
+      } else {
+        clearInterval(reducenumber);
+        closing();
+      }
+    },240);
+  }
 
 });
 
