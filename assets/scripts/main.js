@@ -13,12 +13,16 @@ $(document).ready(function() {
     var number = +(el.text());
     number++;
     $(el).text(number);
+    $( el ).addClass('pulse');
+    setTimeout(function() { $( el ).removeClass('pulse'); },300);
   });
 
   $('.jewelCount').click(function(event) {
     var el = $('.jewelCount .number');
     var number = +(el.text());
-    reduceToZero(closing);
+    if (number > 0) {
+      reduceToZero(closing);
+    }
   });
 
   function closing() {
