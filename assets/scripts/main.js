@@ -13,6 +13,9 @@ $(document).ready(function() {
     var number = +(el.text());
     number++;
     $(el).text(number);
+    if (number == 1 ) {
+      $(el).addClass('active');
+    }
     $( el ).addClass('pulse');
     setTimeout(function() { $( el ).removeClass('pulse'); },300);
   });
@@ -26,6 +29,7 @@ $(document).ready(function() {
   });
 
   function closing() {
+    $('html').css("overflow", "hidden");
     setTimeout(bluescreen, 5);
     setTimeout(fadetoblack, 4000);
   }
