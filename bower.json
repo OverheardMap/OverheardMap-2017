@@ -7,8 +7,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery": "*",
-    "dragscroll": "^0.0.8",
-    "jquery.scrollTo": "^2.1.2"
+    "jquery": "*"
   }
 }
