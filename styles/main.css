@@ -93,6 +93,12 @@ audio#likeAudio {
   display: none;
 }
 
+.feed .loading-spinner {
+  position: static;
+  display: block;
+  margin: 1.5em auto 1em;
+}
+
 div.page {
   position: relative;
   height: 100%;

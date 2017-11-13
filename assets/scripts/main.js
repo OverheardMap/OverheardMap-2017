@@ -37,11 +37,11 @@ $(document).ready(function() {
 
   function bluescreen() {
     $('.overlay').show();
+    $('#errorAudio')[0].play();
   }
 
   function fadetoblack() {
     $('.overlay').addClass('blackout');
-    $('#errorAudio')[0].play();
   }
 
   function reduceToZero(callback) {
