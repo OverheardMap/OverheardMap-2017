@@ -212,8 +212,10 @@ div.page .feed section:hover {
 
 }
 
-div.page .feed section iframe {
+div.page .feed section iframe,
+div.page .feed section img {
   margin: auto;
+  display: block;
 }
 
 div.page section.splash {
