@@ -67,6 +67,10 @@ ul, ol {
   margin: 0;
 }
 
+audio#likeAudio {
+  display: none;
+}
+
 .overlay {
   top: 0;
   right: 0;

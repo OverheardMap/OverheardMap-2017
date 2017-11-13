@@ -13,6 +13,7 @@ $(document).ready(function() {
     var number = +(el.text());
     number++;
     $(el).text(number);
+    $('#likeAudio')[0].play();
     if (number == 1 ) {
       $(el).addClass('active');
     }
@@ -40,6 +41,7 @@ $(document).ready(function() {
 
   function fadetoblack() {
     $('.overlay').addClass('blackout');
+    $('#errorAudio')[0].play();
   }
 
   function reduceToZero(callback) {
