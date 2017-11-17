@@ -1,5 +1,6 @@
 # 2017
 Overheard Map of Now: 2017
+This is Week 2 with Jeff Ko and Mati Jhurry :)
 
 ## Site build
 The site has a static index.html, and main.css. 
