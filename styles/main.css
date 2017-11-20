@@ -146,6 +146,9 @@ div.notes {
 }
 div.notes .wrap {
   text-align: right;
+  font-size: 20pt;
+  font:Times;
+  font-color:lightblue;
 }
 div.notes span, div.notes a {
   display: block;
@@ -371,8 +374,9 @@ div.page section.pokemon img {
 h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.75em;
-  text-align: left;
+  font-size: 16pt;
+  font-color: #ff0554;
+  background-color:#05ff15;
 }
 
 
