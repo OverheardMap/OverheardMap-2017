@@ -4,36 +4,96 @@
   <head>
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <style> body {padding: 0; margin: 0;} </style>
-    <script src="../p5.min.js"></script>
-    <script src="../addons/p5.dom.min.js"></script>
-    <script src="../addons/p5.sound.min.js"></script>
-    <script src="sketch.js"></script>
-      
-      <style>
-          
-          h1 {
+    <style> 
+      html { 
+               
+            }
+        body {
+            padding: 0; 
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+                background-color:black;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+        }
+        
+        h1 {
               color:white;
               font-family: 'Open Sans', sans-serif;
               font-size: 300%;
-              
+                background-color: black; 
+
           }      
-      html { 
-  background: url("http://64.162.228.163/axis-cgi/mjpg/video.cgi") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-      </style>
+     
+              </style>   
+     
+        
   </head>
-  <body>
+  <body onload="newCam()" onclick="newCam()">
       
-      
-<h1 align="center">Jerome?</h1>
+<div id="line1" align="center">
+    <table border="0">
+        <tr>  
+            <td onclick="textChange()" ><div id="question"><h1>jerome?</h1></div></td>
+        </tr>
+         <tr border="1" width="50" height="100" onmouseover="newCam()">  
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    
+var webCam; 
+var r1to4 = Math.floor(Math.random() * 5);
+var n = 1;
 
 
-  
+    
+function textChange(){
+    
+    if (n==1){document.getElementById("question").innerHTML = "<h1>Jerome?</h1>";}
+    if (n==2){document.getElementById("question").innerHTML = "<h1>Are you there?</h1>";}
+    if (n==3){document.getElementById("question").innerHTML = "<h1>I miss you.</h1>";}
+    if (n==4){document.getElementById("question").innerHTML = "<h1>please come home.</h1>";}
+    
+    if (n<4){n++;}else{n=1;}
+}
+
+
+    
+function ipCam (){
+        document.body.style.backgroundImage = webCam;
+    
+}
+    
+
+    
+function newCam(){
+    if (r1to4==1){webCam="url('http://64.162.228.163/axis-cgi/mjpg/video.cgi')";}
+    if (r1to4==2){webCam="url('http://76.101.248.59/mjpg/video.mjpg')";}
+    if (r1to4==3){webCam="url('http://140.211.116.14/mjpg/video.mjpg')";}
+    if (r1to4==4){webCam="url('http://81.0.146.226:88/mjpg/video.mjpg')";}
+
+
+    ipCam();
+    numCycle();
+}
+    
+    
+function numCycle(){
+    if(r1to4<4){r1to4++;} else {r1to4=1;}
+   
+}
+    
+</script>
+      
+      
+      
     </body>
 </html>
 
