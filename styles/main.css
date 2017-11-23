@@ -103,7 +103,8 @@ div.page {
   position: relative;
   height: 100%;
   width: 100%;
-  background: #e9ebee;
+  /*background: #e9ebee;*/
+          
 }
 
 div.viewport-right {
@@ -206,12 +207,16 @@ section.chat {
 div.page .feed {
   padding: 4.5em 2% 1.5em;
   user-select: none;
+ 
 }
 
 div.page .feed section {
   margin-bottom: .8rem;
   position: relative;
-  background: beige;
+  /*background: beige;*/
+ background-image:url("../images/USA_Dominance.jpg");
+    background-repeat: repeat-y;
+    background-size: 100%;
   padding: 2rem;
   border-radius: 5px;
   border: solid 1px rgba(0, 0, 0, 0.07);
