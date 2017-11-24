@@ -38,7 +38,7 @@
 <div id="line1" align="center">
     <table border="0">
         <tr>  
-            <td onclick="textChange()" ><div id="question"><h1>jerome?</h1></div></td>
+            <td onclick="textChange()" ><div id="question"><h1></h1></div></td>
         </tr>
          <tr border="1" width="50" height="100" onmouseover="newCam()">  
             <td></td>
@@ -56,12 +56,18 @@ var n = 1;
     
 function textChange(){
     
-    if (n==1){document.getElementById("question").innerHTML = "<h1>Jerome?</h1>";}
-    if (n==2){document.getElementById("question").innerHTML = "<h1>Are you there?</h1>";}
-    if (n==3){document.getElementById("question").innerHTML = "<h1>I miss you.</h1>";}
-    if (n==4){document.getElementById("question").innerHTML = "<h1>please come home.</h1>";}
+    if (n==1){document.getElementById("question").innerHTML = "<h1>i miss you</h1>";}
+    if (n==2){document.getElementById("question").innerHTML = "<h1>i am looking for you</h1>";}
+    if (n==3){document.getElementById("question").innerHTML = "<h1>i wish you hadn't left</h1>";}
+    if (n==4){document.getElementById("question").innerHTML = "<h1>if i look hard enough i'll find you</h1>";}
+     if (n==5){document.getElementById("question").innerHTML = "<h1>you must be here somewhere</h1>";}
+    if (n==6){document.getElementById("question").innerHTML = "<h1>i dreamt about you last night</h1>";}
+    if (n==7){document.getElementById("question").innerHTML = "<h1>i woke up and smelled you next to me</h1>";}
+    if (n==8){document.getElementById("question").innerHTML = "<h1>i swear i could here you laughing</h1>";}
+    if (n==9){document.getElementById("question").innerHTML = "<h1>now everything feels just a little empty</h1>";}
     
-    if (n<4){n++;}else{n=1;}
+    
+    if (n<9){n++;}else{n=1;}
 }
 
 
@@ -78,7 +84,14 @@ function newCam(){
     if (r1to4==2){webCam="url('http://76.101.248.59/mjpg/video.mjpg')";}
     if (r1to4==3){webCam="url('http://140.211.116.14/mjpg/video.mjpg')";}
     if (r1to4==4){webCam="url('http://81.0.146.226:88/mjpg/video.mjpg')";}
-
+      if (r1to4==5){webCam="url('http://72.172.201.60:8888/out.jpg')";}
+    if (r1to4==6){webCam="url('http://58.233.124.61:8001/cgi-bin/viewer/video.jpg')";}
+    if (r1to4==7){webCam="url('http://81.150.19.218:81/mjpg/video.mjpg')";}
+    if (r1to4==8){webCam="url('http://107.1.33.150/oneshotimage1')";}
+   if (r1to4==9){webCam="url('http://76.76.72.210/cgi-bin/camera')";}
+    if (r1to4==10){webCam="url('http://82.73.2.79:8081/mjpg/video.mjpg')";}
+    if (r1to4==11){webCam="url('http://209.36.12.243:8080/mjpg/video.mjpg')";}
+    if (r1to4==12){webCam="url('http://64.74.186.40:8081/cgi-bin/camera')";}
 
     ipCam();
     numCycle();
@@ -86,7 +99,7 @@ function newCam(){
     
     
 function numCycle(){
-    if(r1to4<4){r1to4++;} else {r1to4=1;}
+r1to4 = Math.floor(Math.random() * 13);
    
 }
     
