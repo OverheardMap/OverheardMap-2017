@@ -5,15 +5,12 @@
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <style> 
-      html, body, #memory { 
+      html { 
+               
+            }
+        body {
             padding: 0; 
             margin: 0;
-            height: 100%;
-            width: 100%;
-            }
-        
-        body {
-          
             background-repeat: no-repeat;
             background-position: center center;
             background-attachment: fixed;
@@ -25,22 +22,18 @@
         }
         
         h1 {
-              color:#999;
+              color:white;
               font-family: 'Open Sans', sans-serif;
               font-size: 300%;
-               
+                background-color: black; 
+
           }      
-        #memory{
-            opacity: 0;
-            background-color: white;
-            
-        }
+     
               </style>   
      
         
   </head>
   <body onload="newCam()" onclick="newCam()">
-      <div id="memory">
       
 <div id="line1" align="center">
     <table border="0">
@@ -52,14 +45,15 @@
         </tr>
     </table>
 </div>
- </div>
-      
+
 <script>
     
 var webCam; 
 var r1to4 = Math.floor(Math.random() * 5);
 var n = 1;
-var alpha = 0.0;    
+
+
+    
 function textChange(){
     
     if (n==1){document.getElementById("question").innerHTML = "<h1>i miss you</h1>";}
@@ -75,12 +69,15 @@ function textChange(){
     
     if (n==1){n=9;}else{n=1;}
 }
+
+
     
 function ipCam (){
         document.body.style.backgroundImage = webCam;
     
 }
     
+
     
 function newCam(){
     if (r1to4==1){webCam="url('http://64.162.228.163/axis-cgi/mjpg/video.cgi')";}
@@ -95,16 +92,15 @@ function newCam(){
     if (r1to4==10){webCam="url('http://82.73.2.79:8081/mjpg/video.mjpg')";}
     if (r1to4==11){webCam="url('http://209.36.12.243:8080/mjpg/video.mjpg')";}
     if (r1to4==12){webCam="url('http://64.74.186.40:8081/cgi-bin/camera')";}
+
     ipCam();
     numCycle();
-    document.getElementById('memory').style.opacity = alpha;
-    alpha = alpha + 0.05;
 }
     
     
 function numCycle(){
-//r1to4 = Math.floor(Math.random() * 13);
- if (r1to4<12){r1to4++;}else{r1to4=1;}
+r1to4 = Math.floor(Math.random() * 13);
+   
 }
     
 </script>
@@ -113,4 +109,6 @@ function numCycle(){
       
     </body>
 </html>
+
+
 
